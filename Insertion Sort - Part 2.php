@@ -11,14 +11,14 @@ function insertionSort1($n, $arr)
     while (++$i < $n) {
 
         $k = $i;
-        
+        $val = $arr[$k];
+
         // Sort from current index
-        while (--$k >= 0 && $arr[$k] > $arr[$k+1]) {
-            $copy = $arr[$k];
-            $arr[$k] = $arr[$k+1];
-    
-            $arr[$k+1] = $copy;
+        while (--$k >= 0 && $val < $arr[$k]) {
+            $arr[$k+1] = $arr[$k];    
         }
+
+        $arr[$k+1] = $val;
 
         // Print current array
         foreach ($arr as $value) {
@@ -36,16 +36,16 @@ function insertionSort1($n, $arr)
 /**
  * Sample input #1
  */
-// $n = 6;
-// $arr = array(1, 4, 3, 5, 6, 2);
+$n = 6;
+$arr = array(1, 4, 3, 5, 6, 2);
 
 /**
  * Sample input #2
  */
 // $n = 7;
 // $arr = array(3, 4, 7, 5, 6, 2, 1);
-// insertionSort1($n, $arr);
-// return;
+insertionSort1($n, $arr);
+return;
 
 $stdin = fopen("php://stdin", "r");
 
