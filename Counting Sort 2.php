@@ -2,21 +2,29 @@
 /**
  * @author: syed ashraf ullah
  * date: 26/04/2020
- * problem: https://www.hackerrank.com/challenges/countingsort1/problem
+ * problem: https://www.hackerrank.com/challenges/countingsort2/problem
  */
 // Complete the countingSort function below.
 function countingSort($arr) {
     
-    // define an array which size is 100 and initial value is zero
+    // arr[i] should be less then 100 
+    // define a 100 size array with initial value is zero 
     $result = array_fill (0,100,0);
     
-    // For each array value increment the value of result array  
-    // Example: for value 3 increment the $result[3]++; 
+    // increment the value of the corresponding index no
     foreach ($arr as $value) {
-        $result[$value]++;
+        $result[$value] ++;
     }
 
-    return $result;
+    $sorted = array();
+    // convert the sorted index to sorted array
+    foreach ($result as $key => $value) {
+        while ($value > 0) {
+            $sorted[] = $key; 
+            $value--;
+        }
+    }
+    return $sorted;
 }
 /**
  * Smaple input #1
