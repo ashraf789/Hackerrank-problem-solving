@@ -7,16 +7,21 @@
 // Complete the maximumToys function below.
 function maximumToys($prices, $k) {
     sort($prices);
+
     $count = 0;
     foreach ($prices as $value) {
         $k -= $value;
+
+        // Could not buy any other product
         if ($k < 0) {
             break;
         }
+
         $count++;
     }
     return $count;
 }
+
 /**
  * Sample #1
  */
