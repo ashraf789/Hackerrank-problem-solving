@@ -14,7 +14,14 @@ function countingSort($arr) {
         $result[$value] += 1;
     }
 
-    return $result;
+    $sorted = array();
+    foreach ($result as $key => $value) {
+        while ($value > 0) {
+            $sorted[] = $key; 
+            $value--;
+        }
+    }
+    return $sorted;
 }
 /**
  * Smaple input #1
