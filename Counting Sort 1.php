@@ -7,14 +7,17 @@
 // Complete the countingSort function below.
 function countingSort($arr) {
     
-    // arr[i] should be less then 100 so our result array will be less then 100
+    // arr[i] should be less then 100 
+    // define a 100 size array with initial value is zero 
     $result = array_fill (0,100,0);
     
+    // increment the value of the corresponding index no
     foreach ($arr as $value) {
         $result[$value] += 1;
     }
 
     $sorted = array();
+    // convert the sorted index to sorted array
     foreach ($result as $key => $value) {
         while ($value > 0) {
             $sorted[] = $key; 
