@@ -5,8 +5,12 @@
  * date: 24/04/2020
  * problem: https://www.hackerrank.com/challenges/quicksort2/problem
  * 
- * Note: My program is working fine but it not accepted by online judge.
- *  I have printed the $ar array and i saw the array is empty. I think i could be the problem from online judge.
+ * Note: The original file reader code is incorrect. It took lot's of time find out the problem.
+ *  
+ * $ar = array();
+ *  for ($i=0; $i<$m; $i++) {
+ *   fscanf($fp, "%d", $ar[$i]);
+ *  }
  */
 function quickSort($ar) {
     
@@ -46,18 +50,29 @@ function merge($left, $right, $p) {
     return $left;
 }
 
-$ar = array(5, 8, 1, 3, 7, 9, 2);
-$ar = quickSort($ar);
-return;
+/**
+ * Sample input #1
+ */
+// $ar = array(5, 8, 1, 3, 7, 9, 2);
+// $ar = quickSort($ar);
+// return;
 
 
 $fp = fopen("php://stdin", "r");
 
 fscanf($fp, "%d", $m);
 
-$ar = array();
-for ($i=0; $i<$m; $i++) {
-    fscanf($fp, "%d", $ar[$i]);
+// Note: This provided reading method is incorrect.
+
+// $ar = array();
+// for ($i=0; $i<$m; $i++) {
+//     fscanf($fp, "%d", $ar[$i]);
+// }
+
+$input = trim(fgets($fp));
+$ar = explode(" ", $input);      
+foreach($ar as &$number){
+    $number = (int)$number;
 }
 
 quickSort($ar);
