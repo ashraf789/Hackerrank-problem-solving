@@ -7,6 +7,10 @@
 // Complete the funnyString function below.
 function funnyString($s) {
     $s = str_split($s);
+<<<<<<< HEAD
+=======
+    $diff1 = array();
+>>>>>>> b0b797c0d5829a7bedc3d4ae2fbd7682183adaff
     $lenth = sizeof($s)-1;
 
     for ($i=0, $j=$lenth; $i < $lenth; $i++,$j--) { 
