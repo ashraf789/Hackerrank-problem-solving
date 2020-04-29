@@ -2,7 +2,7 @@
 /**
  * @author: syed ashraf ullah
  * date: 29/04/2020
- * problem: https://www.hackerrank.com/challenges/pangrams/problem
+ * problem: https://www.hackerrank.com/challenges/hackerrank-in-a-string/problem
  */
 // Complete the hackerrankInString function below.
 function hackerrankInString($s) {
@@ -21,7 +21,7 @@ function hackerrankInString($s) {
             $i++;
         }
     }
-    
+
     foreach($index as $index => $value ){
         if(!$value) {
             return 'NO';
