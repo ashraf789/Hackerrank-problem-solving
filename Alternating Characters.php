@@ -1,7 +1,7 @@
 <?php
 /**
  * @author: syed ashraf ullah
- * date: 29/04/2020
+ * date: 30/04/2020
  * problem: https://www.hackerrank.com/challenges/alternating-characters/problem
  */
 // Complete the alternatingCharacters function below.
