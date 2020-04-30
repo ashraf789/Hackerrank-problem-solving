@@ -22,10 +22,10 @@ function alternatingCharacters($s) {
     return $count;
 }
 
-$s = 'AAAA';
-$result = alternatingCharacters($s);
-echo $result;
-return;
+// $s = 'AAAA';
+// $result = alternatingCharacters($s);
+// echo $result;
+// return;
 
 $fptr = fopen(getenv("OUTPUT_PATH"), "w");
 
