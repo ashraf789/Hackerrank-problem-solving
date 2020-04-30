@@ -6,9 +6,26 @@
  */
 // Complete the alternatingCharacters function below.
 function alternatingCharacters($s) {
+    $s = str_split($s);
+    $match = $s[0];
+    $count = 0;
+    for ($i=1; $i < sizeof($s); $i++) { 
+        
+        if ($s[$i] == $match) {
+            $count++;
+            continue;
+        }
 
+        $match = $s[$i];
+    }
 
+    return $count;
 }
+
+$s = 'AAAA';
+$result = alternatingCharacters($s);
+echo $result;
+return;
 
 $fptr = fopen(getenv("OUTPUT_PATH"), "w");
 
