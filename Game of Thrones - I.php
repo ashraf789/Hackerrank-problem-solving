@@ -37,10 +37,10 @@ function gameOfThrones($s) {
     return 'YES';
 }
 
-$s = 'cdefghmnopqrstuvw';
-$result = gameOfThrones($s);
-echo $result;
-return;
+// $s = 'cdefghmnopqrstuvw';
+// $result = gameOfThrones($s);
+// echo $result;
+// return;
 
 $fptr = fopen(getenv("OUTPUT_PATH"), "w");
 
