@@ -1,7 +1,7 @@
 # Hacker-rank-problem-solving
 https://www.hackerrank.com/profile/ashraf789
 
-All my solutions that i gain 5 (*) in both SQL and Problem Solving. <br/>
+All my solutions to get 5 (*) golde badge in both SQL and Problem Solving. <br/>
 Feel free to compare your solution with mine.
 
 
